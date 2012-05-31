@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="1.6" type="plugin" group="system" method="upgrade">
+    <name>K2 Category Template Assignment</name>
+    <author>Brian Shaughnessy</author>
+    <creationDate>May 2012</creationDate>
+    <copyright>(C) Brian Shaughnessy</copyright>
+    <authorEmail>brian@lcdservices.biz</authorEmail>
+    <authorUrl>www.lcdservices.biz</authorUrl>
+    <license>GNU Affero General Public License version 3 or later</license>
+    <version>1.0</version>
+    <description>Allow user to set the template to use based on the content category being viewed. If a template style has been set through the menu item parameter, we retain that setting. If the K2 category inherits from another category, we also search for a match there, but only if there is no direct category match. Based on SM2 Section Template plugin.</description>
+	
+    <files>
+        <filename plugin="k2categorytemplate">k2categorytemplate.php</filename>
+        <filename>index.html</filename>
+    </files>
+	
+    <config>
+        <fields name="params">
+        <fieldset name="basic">
+            <field name="matrix"
+                   type="textarea"
+                   description="Enter the category id, comma, template folder. One per line."
+                   label="Category/Template">
+            </field>
+        </fieldset>
+        </fields>
+    </config>
+</extension>
+
